@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package proto;
+
+message Message {
+  string from = 1;
+  string message = 2;
+  string dateTime = 3;
+}
+
+message User {
+  int32 id = 1;
+  string username = 2;
+  bool connected = 3;
+}
+
+message UserList {
+  repeated User users = 1; // Повторяющееся поле для массива пользователей
+}
