@@ -1,14 +1,14 @@
 package model;
 
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class User {
     private int id;
     private String username;
-    public static int counter;
+    public static AtomicInteger counter = new AtomicInteger(0);
 
-    public User(String name, int id) {
+    public User(String name) {
         this.username = name;
-        this.id = id;
     }
 
     public String getUsername() {
